@@ -14,15 +14,17 @@
 }
 
 html[data-theme='light'] {
-    --primary-color: #1d1e20;
-    --secondary-color: #28292d;
-    --ternary-color: #2d2e33;
+    --primary-color: #e2e1df;
+    --secondary-color: #d7d6d2;
+    --ternary-color: #d2d1cc;
+    --font-color: #222525;
 }
 
 html[data-theme='dark'] {
     --primary-color: #1d1e20;
     --secondary-color: #28292d;
     --ternary-color: #2d2e33;
+    --font-color: rgb(221, 218, 218);
 }
 
 
@@ -73,18 +75,33 @@ html[data-theme='dark'] {
     outline: none;
 }
 
-.navigatorHeader div:nth-child(2) {
+.navigatorHeader #friendInfo {
     background-color: var(--ternary-color);
     display: grid;
-    grid-template-columns: 10vw 35vw 33vw;
+    grid-template-columns: 15vw 33vw 30vw;
 }
 
 .atSign {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .friendName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.atSign {
+    gap: 1vw;
+}
+
+.atSign, .friendName h2 {
+    font-size: 1vw;
+    color: var(--font-color);
 }
 
 .specials {
@@ -129,7 +146,7 @@ html[data-theme='dark'] {
     display: flex;
     align-items: center;
     color: white;
-    padding: 1vw 2vw;
+    padding: 0.8vw 2vw;
     font-size: 1vw;
     font-weight: lighter;
     cursor: pointer;
