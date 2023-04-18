@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/font/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/body.css">
+    <link href="/assets/font/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/body.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
@@ -14,7 +14,20 @@
 </head>
 <body>
     <section class="principal">
-        <nav class="users"></nav>
+        <nav class="groups">
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+        </nav>
         <section class="holders">
             <header class="navigatorHeader">
                 <div id="search">
@@ -53,11 +66,18 @@
                     </div>
                 </div>
                 <div class="chat">
+                    <div id="messages">
+                    </div>
+                    <div id="entry">
+                        <input type="text" placeholder="Enviar sua mensagem">
+                    </div>
                 </div>
-                <div></div>
+                <div class="information"></div>
             </section>
         </section>
     </section>
-    <script src="content/js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/content/js/chat.js"></script>
+    <script src="/content/js/theme.js"></script>
 </body>
 </html>

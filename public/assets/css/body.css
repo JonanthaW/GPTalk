@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
     scroll-behavior: smooth;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+    scrollbar-width: thin;
   }
 
 :root {
@@ -13,14 +15,14 @@
     --font-color: rgb(221, 218, 218);
 }
 
-html[data-theme='light'] {
+html[theme='light'] {
     --primary-color: #e2e1df;
     --secondary-color: #d7d6d2;
     --ternary-color: #d2d1cc;
     --font-color: #222525;
 }
 
-html[data-theme='dark'] {
+html[theme='dark'] {
     --primary-color: #1d1e20;
     --secondary-color: #28292d;
     --ternary-color: #2d2e33;
@@ -35,8 +37,30 @@ html[data-theme='dark'] {
     height: 100vh;
 }
 
-.users {
+.groups {
     background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1vw;
+    gap: 1vw;
+}
+
+.groups div {
+    height: 8vh;
+    width: 4vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.groups div button {
+    height: inherit;
+    width: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .holders {
@@ -136,9 +160,37 @@ html[data-theme='dark'] {
 }
 .main .chat {
     background-color: var(--ternary-color);
+    grid-template-rows: 90% 10%;
+    display: grid;
+    justify-content: center;
 }
-.main div:nth-child(3) {
+.main .information {
     background-color: var(--secondary-color);
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    overflow-y: scroll;
+    max-height: 80vh;
+    overflow-x: hidden;
+    padding-left: 5vw;
+}
+
+#messages div {
+    padding: .5vw 0vw;
+}
+
+#messages div h2 {
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+#messages div p {
+    font-size: 1vw;
+    color: var(--font-color);
 }
 
 
@@ -151,4 +203,25 @@ html[data-theme='dark'] {
     font-weight: lighter;
     cursor: pointer;
     gap: 2vw;
+}
+
+#entry {
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1vw 0vw;
+}
+
+#entry input {
+    width: 50vw;
+    border-radius: 0.3vw;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    font-size: 1vw;
+    font-weight: lighter;
+    outline: none;
+    height: 3vw;
+    padding: 0vw 2vw;
 }
